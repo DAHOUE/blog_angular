@@ -1,17 +1,34 @@
 <div>
-	<h3>Add a new post</h3>
-	<form class="form" [formGroup]="postForm" (ngSubmit)="onSubmit()">
-		<div class="form-group">
-			<label for="title">Titre</label>
-			<input type="text" class="form-control" id="title" formControlName="title">
-		</div>
-		<div class="form-group">
-			<label for="content">Titre</label>
-			<textarea  class="form-control" id="content" formControlName="content"></textarea>
-		</div>
-		<div class="form-group text-align-center">
-			<button type="submit" class="btn btn-success " style="margin-right: 5px;" [disabled] = "postForm.invalid">Submit</button>
-			<button class="btn btn-success" routerLink="/posts" >Cancel</button>
-		</div>
-	</form>
+  <h3>Ajouter un nouvel article</h3>
+  <form class="form" [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Titre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        formControlName="title"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="content">Contenu de l'article </label>
+      <textarea
+        class="form-control"
+        id="content"
+        formControlName="content"
+      ></textarea>
+    </div>
+    <div class="form-group text-align-center">
+      <button
+        type="submit"
+        class="btn btn-success"
+        style="margin-right: 5px"
+        [disabled]="postForm.invalid"
+      >
+        Enregistrer
+      </button>
+      <button class="btn btn-success" routerLink="/posts">Retour</button>
+    </div>
+  </form>
 </div>

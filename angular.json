@@ -146,6 +146,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "blog"
+    }
+  },
+  "defaultProject": "blog",
+  "cli": {
+    "analytics": "a914498b-7828-4d74-a0b8-b6d14df3cf5f"
+  }
 }
